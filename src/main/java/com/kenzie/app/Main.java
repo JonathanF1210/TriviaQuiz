@@ -39,7 +39,7 @@ public class Main {
                     sc.nextLine();
                 }
 
-                System.out.println("Whats player 1's name?");
+                System.out.println("What's player 1's name?");
                 String namePlayer1 = sc.nextLine();
                 System.out.println("Welcome " + namePlayer1 + "!");
                 System.out.println();
@@ -78,12 +78,12 @@ public class Main {
                     sc.nextLine();
                 }
 
-                System.out.println("Whats player 1's name?");
+                System.out.println("What's player 1's name?");
                 String namePlayer1 = sc.nextLine();
                 System.out.println("Welcome " + namePlayer1 + "!");
                 System.out.println();
 
-                System.out.println("Whats player 2's name?");
+                System.out.println("What's player 2's name?");
                 String namePlayer2 = sc.nextLine();
                 System.out.println("Welcome " + namePlayer2 + "!");
                 System.out.println();
@@ -93,6 +93,8 @@ public class Main {
                 twoPlayerMode.twoPlayerGame(allClues);
                 System.out.println("----------\nGame Over! \nPlayer 1's score was: " + twoPlayerMode.getPlayer1Score());
                 System.out.println("\nPlayer 2's score was: " + twoPlayerMode.getPlayer2Score());
+                System.out.println();
+                twoPlayerMode.whoWon();
                 System.out.println();
                 System.out.println("Type \"yes\" to play again.");
                 String playAgain = sc.nextLine().toLowerCase().replaceAll(" ", "");

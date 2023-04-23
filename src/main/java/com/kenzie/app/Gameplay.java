@@ -83,10 +83,12 @@ public class Gameplay {
                             .replaceAll(" ", ""))) {
                 System.out.println("Congrats " + getNamePlayer1() + ", You are correct!");
                 player1Score++;
+                System.out.println();
                 System.out.println("Your score: " + getPlayer1Score());
             } else {
                 System.out.println("I'm sorry " + getNamePlayer1() + ", that's not the right answer." +
                         "\nThe correct answer was: " + currentQuestion.getAnswer());
+                System.out.println();
                 System.out.println("Your score: " + getPlayer1Score());
             }
 
@@ -124,10 +126,14 @@ public class Gameplay {
                             .replaceAll(" ", ""))) {
                 System.out.println("Congrats " + getNamePlayer1() + ", You are correct!");
                 player1Score++;
+                System.out.println();
+
                 System.out.println("Player 1's score: " + getPlayer1Score());
             } else {
                 System.out.println("I'm sorry " + getNamePlayer1() + ", that's not the right answer." +
                         "\nThe correct answer was: " + currentQuestion.getAnswer());
+                System.out.println();
+
                 System.out.println("Player 1's score: " + getPlayer1Score());
             }
             System.out.println();
@@ -157,14 +163,27 @@ public class Gameplay {
                                 .replaceAll(" ", ""))) {
                     System.out.println("Congrats " + getNamePlayer2() + ", You are correct!");
                     player2Score++;
+                    System.out.println();
+
                     System.out.println("Player 2's score: " + getPlayer2Score());
                 } else {
                     System.out.println("I'm sorry " + getNamePlayer2() + ", that's not the right answer." +
                             "\nThe correct answer was: " + currentQuestion.getAnswer());
+                    System.out.println();
                     System.out.println("Player 2's score: " + getPlayer2Score());
                 }
                 System.out.println();
             }
+    }
+
+    public void whoWon(){
+        if (getPlayer1Score() > getPlayer2Score()){
+            System.out.println("Congrats " + getNamePlayer1() + "! You are the winner!");
+        } else if (getPlayer2Score() > getPlayer1Score()) {
+            System.out.println("Congrats " + getNamePlayer2() + "! You are the winner!" );
+        } else {
+            System.out.println("It was a tie!");
+        }
     }
 
 }
